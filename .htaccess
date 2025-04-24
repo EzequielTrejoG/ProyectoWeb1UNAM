@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirige /archivo → archivo.php (si no existe como archivo)
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+# Bloquea acceso directo con .php en la URL
+RewriteCond %{THE_REQUEST} \s/.*\.php [NC]
+RewriteRule ^ - [R=404,L]
