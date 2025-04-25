@@ -12,5 +12,4 @@
 
     $departamento->editar('1', 'VentasRegionales',$fechaActualizacion, '3');
 
-
 ?>
