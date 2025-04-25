@@ -9,7 +9,7 @@
         }
     
         public function insertar($descripcion){
-            $sql= "INSERT INTO departamentos (descripcion) values ('$descripcion')"; //query dinamico se crea cuando se ejecuta
+            $sql = "INSERT INTO departamentos (descripcion) values ('$descripcion')"; //query dinamico se crea cuando se ejecuta
             return ejecutarConsultaRetornaID($sql);
         }
 
