@@ -14,40 +14,40 @@
         }
 
         public function editar($idDepartamento, $descripcion, $fechaActualizacion, $idEmpActualiza){
-            $sql="UPDATE departamentos SET descripcion='$descripcion', fechaActualizacion='$fechaActualizacion', idEmpleado='$idEmpActualiza'
+            $sql = "UPDATE departamentos SET descripcion='$descripcion', fechaActualizacion='$fechaActualizacion', idEmpleado='$idEmpActualiza'
             WHERE idDepartamento='$idDepartamento'";
             return ejecutarConsulta($sql);
 
         }
 
         public function desactivar($idDepartamento){
-            $sql="UPDATE departamentos SET activo = '0'
+            $sql = "UPDATE departamentos SET activo = '0'
             WHERE idDepartamento='$idDepartamento'";
             return ejecutarConsulta($sql);
         }
 
         public function activar($idDepartamento){
-            $sql="UPDATE departamentos SET activo = '1'
+            $sql = "UPDATE departamentos SET activo = '1'
             WHERE idDepartamento='$idDepartamento'";
             return ejecutarConsulta($sql);
         }
 
         public function mostrar($idDepartamento){
-            $sql="SELECT idDepartamento, descripcion, activo, fechaCreacion, fechaActualizacion,
-            idEmpActualiza FROM departamentos
-            WHERE idDepartamento='idDepartamento'";
+            $sql = "SELECT idDepartamento, descripcion, activo, fechaCreacion, fechaActualizacion,
+            idEmpleado FROM departamentos
+            WHERE idDepartamento = '$idDepartamento'";
             return ejecutarConsultaSimpleFila($sql);
         }
 
         public function listar(){
-            $sql="SELECT idDepartamento, descripcion, activo, fechaCreacion, fechaActualizacion,
-            idEmpActualiza FROM departamentos";
+            $sql = "SELECT idDepartamento, descripcion, activo, fechaCreacion, fechaActualizacion,
+            idEmpleado FROM departamentos";
             return ejecutarConsulta($sql);
         }
 
         public function select(){
-            $sql="SELECT idDepartamento, descripcion, activo, fechaCreacion, fechaActualizacion,
-            idEmpActualiza FROM departamentos
+            $sql = "SELECT idDepartamento, descripcion, activo, fechaCreacion, fechaActualizacion,
+            idEmpleado FROM departamentos
             WHERE activo='1'";
             return ejecutarConsulta($sql);
         }
