@@ -2,7 +2,7 @@
 <!--al principio -->
 <?php
 
-require 'cabecero.php';
+require '../cabecero.php';
 
 ?>
 <!-- Content Wrapper. Contains page content -->
@@ -62,5 +62,5 @@ require 'cabecero.php';
 <!--al Final -->
 
 <?php
-require 'piepagina.php';
+require '../piepagina.php';
 ?>
