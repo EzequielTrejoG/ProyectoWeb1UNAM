@@ -1,5 +1,5 @@
 <?php
-require '../cabecero.php';
+    require '../cabecero.php';
 ?>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -56,5 +56,5 @@ require '../cabecero.php';
 <!-- /.content-wrapper -->
 
 <?php
-require '../piepagina.php';
+    require '../piepagina.php';
 ?>
