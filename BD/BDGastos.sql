@@ -1,5 +1,3 @@
-CREATE DATABASE IF NOT EXISTS Gastos;
-
 CREATE TABLE IF NOT EXISTS departamentos(
     idDepartamento INT NOT NULL AUTO_INCREMENT,
     Descripcion VARCHAR(100) NOT NULL,
