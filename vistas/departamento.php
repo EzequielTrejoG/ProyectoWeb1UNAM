@@ -41,7 +41,7 @@
                         <div class="form-group col-xl-6 col-lg-6 col-md-12 col-sm-12">
                             <label for="descripcion">Nombre del departamento</label>
                             <input class="form-control" type="hidden" name="idDepartamento" id="idDepartamento">
-                            <input class="form-control" type="text" name="descripcion" id="descripcion" maxlength="256" placeholder="Nombre departamento" required>
+                            <input class="form-control" type="text" name="descripcion" id="descripcion" maxlength="256" placeholder="Ej. Sistemas" required>
                         </div>
                         <div class="form-group col-xl-6 col-lg-6 col-md-12 col-sm-12">
                            <button class="btn btn-primary" id="btnGuardar" type="submit">Guardar</button>
