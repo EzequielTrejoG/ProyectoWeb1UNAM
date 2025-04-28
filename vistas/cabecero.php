@@ -11,7 +11,7 @@ if ($_SERVER['HTTPS'] != 'on') {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>INFO FESC Gastos</title>
+    <title>INFO</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
@@ -117,7 +117,7 @@ if ($_SERVER['HTTPS'] != 'on') {
                                 <p>
                                     Autorización
                                     <i class="fas fa-angle-left right"></i>
-                                    <!--<span class="badge badge-info right">6</span>-->
+                                    <span class="badge badge-info right">6</span>
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
