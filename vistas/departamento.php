@@ -16,22 +16,22 @@
                 <div class="panel-body" id="listadoregdata">
                     <table id="tblistadoregdata" class="table table-striped table-bordered table-condensed table-over">
                         <thead>
-                            <th>Opciones</th>
                             <th>Descripción</th>
                             <th>Fecha de Creación</th>
                             <th>Fecha de Actualización</th>
                             <th>Estatus</th>
                             <th>Empleado modificó</th>
+                            <th>Opciones</th>
                         </thead>
                         <tbody>
                         </tbody>
                         <thead>
-                            <th>Opciones</th>
                             <th>Descripción</th>
                             <th>Fecha de Creación</th>
                             <th>Fecha de Actualización</th>
                             <th>Estatus</th>
                             <th>Empleado modificó</th>
+                            <th>Opciones</th>
                         </thead>
                     </table>
                 </div>
