@@ -23,7 +23,7 @@
                             <th>Empleado modificó</th>
                             <th>Opciones</th>
                         </thead>
-                        <tbody>
+                        <tbody class="text-center">
                         </tbody>
                         <thead>
                             <th>Descripción</th>

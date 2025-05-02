@@ -12,17 +12,19 @@
             while ($reg = $rspta->fetch_object())
             {
                 $data[] = array(
-                    '0' => ($reg->activo) ? '<button class="btn btn-warning" onclick="mostrar(' . $reg->idDepartamento . ')">
-                    <i class="fa fa-pencil"></i></button>' .
-                    ' <button class="btn btn-danger" onclick="desactivar(' . $reg->idDepartamento . ')">
-                    <i class="fa fa-close"></i></button>' : 
-                    '<button class="btn btn-warning" onclick="mostrar(' . $reg->idDepartamento . ')">
-                    <i class="fa fa pencil"></i></button>' .
-                    ' <button class="btn btn-primary" onclick="activar(' . $reg->idDepartamento . ')">
-                    <i class="fa fa-check"></i></button>' ,
-                    '1' => $reg->descripcion,
-                    '2' => $reg->fechaCreacion,
-                    '3' => ($reg->activo) ? '<span class="label bg-green">Activado</span>' : '<span class="label bg-red">Desactivado</span>'  
+                    '0' => $reg->descripcion,
+                    '1' => $reg->fechaCreacion,
+                    '2' => $reg->fechaActualizacion,
+                    '3' => ($reg->activo) ? '<span class="badge badge-success">Activado</span>' : '<span class="badge badge-danger">Desactivado</span>',
+                    '4' => $reg->idEmpleado,
+                    '5' => ($reg->activo) ? '<button class="btn btn-warning btn-sm" onclick="mostrar(' . $reg->idDepartamento . ')">
+                    <i class="far fa-edit"></i></button>' .
+                    ' <button class="btn btn-danger btn-sm" onclick="desactivar(' . $reg->idDepartamento . ')">
+                    <i class="far fa-window-close"></i></button>' : 
+                    '<button class="btn btn-warning btn-sm" onclick="mostrar(' . $reg->idDepartamento . ')">
+                    <i class="far fa-edit"></i></button>' .
+                    ' <button class="btn btn-primary btn-sm" onclick="activar(' . $reg->idDepartamento . ')">
+                    <i class="far fa-check-square"></i></button>'
                 );   
             }
             $results = array(
@@ -31,6 +33,7 @@
                 "iTotalDisplayRecords" => count($data),
                 "aaData" => $data
             );
+            echo json_encode($results);
         break;
     }
 
