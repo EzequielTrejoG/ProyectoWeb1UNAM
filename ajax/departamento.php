@@ -25,6 +25,12 @@
                     '3' => ($reg->activo) ? '<span class="label bg-green">Activado</span>' : '<span class="label bg-red">Desactivado</span>'  
                 );   
             }
+            $results = array(
+                "sEcho" => 1, //Informacion para el datatables
+                "iTotalRecords" => count($data),
+                "iTotalDisplayRecords" => count($data),
+                "aaData" => $data
+            );
         break;
     }
 

@@ -18,8 +18,19 @@ function listar(){
             'csvHtml5',
             'pdfHtml5',
             'print'
-        ]
-    });
+        ],
+        "ajax": {
+            url: '../ajax/departamento?op=listar',
+            type: "GET",
+            dataType: "json",
+            error: function(e){
+                console.log(e.responseText);
+            }
+        },
+        "destroy": true,
+        "iDisplayLength": 5, //Indica cuántos registros registros se mostrarán en el table.
+        "order": [[1, "desc"]]
+    }).DataTable();
 }
 
 init();
