@@ -41,7 +41,7 @@
 
         public function listar(){
             $sql = "SELECT idDepartamento, descripcion, activo, fechaCreacion, fechaActualizacion,
-            idEmpleado FROM departamentos";
+            idEmpleado FROM departamentos ORDER BY descripcion ASC";
             return ejecutarConsulta($sql);
         }
 
