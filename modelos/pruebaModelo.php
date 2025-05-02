@@ -1,6 +1,6 @@
 <?php
     
-    require_once "../modelo/Departamento.php";
+    require_once "../modelos/Departamento.php";
 
     $departamento = new Departamento();
 
