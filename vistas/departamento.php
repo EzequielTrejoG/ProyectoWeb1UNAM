@@ -62,3 +62,5 @@
 <?php
     require 'piepagina.php';
 ?>
+
+<script type="text/javascript" src="../files/js/departamento.js"></script>
