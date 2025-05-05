@@ -2,6 +2,7 @@ var table;
 
 function init(){
     listar();
+    mostrarForm(false);
 }
 
 function listar(){
@@ -31,6 +32,36 @@ function listar(){
         "iDisplayLength": 5, //Indica cuántos registros registros se mostrarán en el table.
         "order": [[1, "desc"]]
     }).DataTable();
+}
+
+//Limpiar formulario
+function limpiar(){
+    $("#idDepartamento").val("");
+    $("#descripcion").val("");
+    //document.getElementById("formulario").reset();
+}
+
+function mostrarForm(flag){
+    limpiar();
+    if(flag){
+        $("#listadoregdata").hide();
+        $("#formregdata").show();
+        $("#btnagregar").hide();
+        $("#btnGuardar").prop("disabled", false);
+        /*document.getElementById("listadoregdata").style.display = "none";
+        document.getElementById("formregdata").style.display = "block";
+        document.getElementById("btnagregar").style.display = "none";
+        document.getElementById("btnGuardar").disabled = false;*/
+    }else{
+        $("#listadoregdata").show();
+        $("#formregdata").hide();
+        $("#btnagregar").show();
+    }
+}
+
+function cancelarForm(){
+    limpiar();
+    mostrarForm(false);
 }
 
 init();

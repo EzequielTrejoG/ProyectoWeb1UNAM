@@ -9,7 +9,7 @@
         <!-- Default box -->
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">DEPARTAMENTOS</h3>
+                <h3 class="card-title">DEPARTAMENTOS <button class="btn btn-success" id="btnagregar" onclick="mostrarForm(true)"><i class="fas fa-plus-circle"></i> Agregar</button></h3>
             </div>
             <div class="card-body">
                 <!-- Contenedor de listados-->
@@ -44,8 +44,8 @@
                             <input class="form-control" type="text" name="descripcion" id="descripcion" maxlength="256" placeholder="Ej. Sistemas" required>
                         </div>
                         <div class="form-group col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                           <button class="btn btn-primary" id="btnGuardar" type="submit">Guardar</button>
-                           <button class="btn btn-danger" id="btnCancelar" type="clear">Cancelar</button> 
+                           <button class="btn btn-primary" id="btnGuardar" type="submit"><i class="fas fa-save"></i> Guardar</button>
+                           <button class="btn btn-danger" id="btnCancelar" type="clear" onclick="cancelarForm()"><i class="fas fa-arrow-circle-left"></i> Cancelar</button> 
                         </div>
                     </form>
                 </div>
