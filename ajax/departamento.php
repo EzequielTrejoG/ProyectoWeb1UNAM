@@ -45,7 +45,7 @@
             if(empty($idDepartamento))
             {
                 $rspta = $departamento->insertar($descripcion);
-                echo $rpsta != 0 ? "Departamento registrado" : "Error departamento no registrado";
+                echo $rspta != 0 ? "Departamento registrado" : "Error departamento no registrado";
             }
             else
             {
