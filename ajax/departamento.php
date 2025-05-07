@@ -50,7 +50,7 @@
             else
             {
                 $rspta = $departamento->editar($idDepartamento, $descripcion, $fechaActualizacion, $idEmpActualiza);
-                echo $rpsta != 0 ? "Departamento actualizado" : "Error departamento no actualizado";
+                echo $rspta != 0 ? "Departamento actualizado" : "Error departamento no actualizado";
             }
         break;
     }
