@@ -3,6 +3,10 @@ var table;
 function init(){
     listar();
     mostrarForm(false);
+
+    $("#formulario").on("submit", function(e){
+        guardaryEditar(e);
+    });
 }
 
 function listar(){
@@ -57,6 +61,25 @@ function mostrarForm(flag){
 function cancelarForm(){
     limpiar();
     mostrarForm(false);
+}
+
+function guardaryEditar(e){
+    e.preventDeafult();
+    $("#btnagregar").prop("disable", true);
+    var formData = new FormData($("#formulario")[0]);
+    $.ajax({
+        url: "../../ajax/departamento?op=guardaryeditar",
+        type: "POST",
+        data: formData,
+        contentType: false, //No manda cabecero
+        processData: false, //No convierte objetos en string
+        success: function(mensaje){
+            alert(mensaje);
+            mostrarForm(false);
+            table.ajax.reload();
+        }
+    });
+    limpiar();
 }
 
 init();
