@@ -38,7 +38,6 @@ function listar(){
 function limpiar(){
     $("#idDepartamento").val("");
     $("#descripcion").val("");
-    //document.getElementById("formulario").reset();
 }
 
 function mostrarForm(flag){
@@ -48,10 +47,6 @@ function mostrarForm(flag){
         $("#formregdata").show();
         $("#btnagregar").hide();
         $("#btnGuardar").prop("disabled", false);
-        /*document.getElementById("listadoregdata").style.display = "none";
-        document.getElementById("formregdata").style.display = "block";
-        document.getElementById("btnagregar").style.display = "none";
-        document.getElementById("btnGuardar").disabled = false;*/
     }else{
         $("#listadoregdata").show();
         $("#formregdata").hide();
