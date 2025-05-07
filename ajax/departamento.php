@@ -2,6 +2,11 @@
 
     require_once '../modelos/Departamento.php';
 
+    $idDepartamento = isset($_POST['idDepartamento']) ? limpiarCadenas($_POST['idDepartamento']): "";
+    $descripcion = isset($_POST['descripcion']) ? limpiarCadenas($_POST['descripcion']): "";
+    $fechaActualizacion = date("Y-m-d H:i:s"); 
+    $idEmpActualiza = 1; //Cambiar por el usuario de la sesión 
+
     $departamento = new Departamento();
 
     switch($_GET['op'])
@@ -34,6 +39,19 @@
                 "aaData" => $data
             );
             echo json_encode($results);
+        break;
+
+        case 'guardaryeditar':
+            if(empty($idDepartamento))
+            {
+                $rspta = $departamento->insertar($descripcion);
+                echo $rpsta != 0 ? "Departamento registrado" : "Error departamento no registrado";
+            }
+            else
+            {
+                $rspta = $departamento->editar($idDepartamento, $descripcion, $fechaActualizacion, $idEmpActualiza);
+                echo $rpsta != 0 ? "Departamento actualizado" : "Error departamento no actualizado";
+            }
         break;
     }
 
