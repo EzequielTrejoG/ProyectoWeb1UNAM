@@ -24,11 +24,11 @@
                     '4' => $reg->idEmpleado,
                     '5' => ($reg->activo) ? '<button class="btn btn-warning btn-sm" onclick="mostrar(' . $reg->idDepartamento . ')">
                     <i class="far fa-edit"></i></button>' .
-                    ' <button class="btn btn-danger btn-sm" onclick="desactivar(' . $reg->idDepartamento . ')">
+                    ' <button class="btn btn-danger btn-sm" title="Desactivar" onclick="desactivar(' . $reg->idDepartamento . ')">
                     <i class="far fa-window-close"></i></button>' : 
                     '<button class="btn btn-warning btn-sm" onclick="mostrar(' . $reg->idDepartamento . ')">
                     <i class="far fa-edit"></i></button>' .
-                    ' <button class="btn btn-primary btn-sm" onclick="activar(' . $reg->idDepartamento . ')">
+                    ' <button class="btn btn-primary btn-sm" title="Activar" onclick="activar(' . $reg->idDepartamento . ')">
                     <i class="far fa-check-square"></i></button>'
                 );   
             }
