@@ -53,6 +53,11 @@
                 echo $rspta != 0 ? "Departamento actualizado" : "Error departamento no actualizado";
             }
         break;
+
+        case 'mostrar':
+            $rspta = $departamento->mostrar($idDepartamento);
+            echo json_encode($rspta);
+        break;
     }
 
 ?>

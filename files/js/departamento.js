@@ -87,4 +87,15 @@ function guardaryEditar(e){
     limpiar();
 }
 
+function mostrar(idDepartamento){
+    $.post("../ajax/departamento?op=mostrar", {idDepartamento:idDepartamento}, function(data){
+        //console.log(data);
+        data = JSON.parse(data);
+        //console.log(data);
+        mostrarForm(true);
+        $("#idDepartamento").val(data.idDepartamento);
+        $("#descripcion").val(data.descripcion);
+    });
+}
+
 init();
