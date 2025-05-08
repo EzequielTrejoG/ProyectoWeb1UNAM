@@ -35,6 +35,8 @@
     <script src="../public/plugins/jszip/jszip.min.js"></script>
     <script src="../public/plugins/pdfmake/pdfmake.min.js"></script>
     <script src="../public/plugins/pdfmake/vfs_fonts.js"></script>
+    <!-- Js para alerts bonitos -->
+    <script src="../public/plugins/toastr/toastr.min.js"></script>
 </body>
 
 </html>

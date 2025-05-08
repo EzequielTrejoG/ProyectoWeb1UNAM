@@ -24,6 +24,8 @@ if ($_SERVER['HTTPS'] != 'on') {
     <link rel="stylesheet" href="../public/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" hrñef="../public/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
     <link rel="stylesheet" href="../public/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <!-- Css para alerts bonitos -->
+    <link rel="stylesheet" href="../public/plugins/toastr/toastr.min.css">
 </head>
  
 <body class="hold-transition sidebar-mini">
