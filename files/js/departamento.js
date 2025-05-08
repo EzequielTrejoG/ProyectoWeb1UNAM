@@ -103,6 +103,19 @@ function desactivar(idDepartamento){
     '<button type="button" id="rsptaSi" class="btn btn-success">Sí</button> ' +
     '<button type="button" id="rsptaNo" class="btn btn-danger">No</button>', "Alerta");
 
+    /*var ventanaEleccion = toastr.warning(
+        '¿Deseas desactivar el Depto seleccionado?<br>' +
+        '<button type="button" id="rsptaSi" class="btn btn-success">Sí</button> ' +
+        '<button type="button" id="rsptaNo" class="btn btn-danger">No</button>', 
+        "Alerta", 
+        {
+          closeButton: false,
+          allowHtml: true,
+          timeOut: 0, // para que no desaparezca automáticamente
+          extendedTimeOut: 0
+        }
+    );*/
+
     $("#rsptaSi").click(function(){
         console.log("El usuario ha elegido desactivar el Depto");
         toastr.clear(ventanaEleccion);
@@ -128,6 +141,19 @@ function activar(idDepartamento){
     var ventanaEleccion = toastr.warning('¿Deseas activar el Depto seleccionado?<br>' +
     '<button type="button" id="rsptaSi" class="btn btn-success">Sí</button> ' +
     '<button type="button" id="rsptaNo" class="btn btn-danger">No</button>', "Alerta");
+
+    /*var ventanaEleccion = toastr.warning(
+        '¿Deseas activar el Depto seleccionado?<br>' +
+        '<button type="button" id="rsptaSi" class="btn btn-success">Sí</button> ' +
+        '<button type="button" id="rsptaNo" class="btn btn-danger">No</button>', 
+        "Alerta", 
+        {
+          closeButton: false,
+          allowHtml: true,
+          timeOut: 0, // para que no desaparezca automáticamente
+          extendedTimeOut: 0
+        }
+    );*/
 
     $("#rsptaSi").click(function(){
         console.log("El usuario ha elegido activar el Depto");
