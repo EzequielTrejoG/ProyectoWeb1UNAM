@@ -30,7 +30,7 @@ if ($_SERVER['HTTPS'] != 'on') {
  
 <body class="hold-transition sidebar-mini">
     <!-- Site wrapper -->
-    <div class="wrapper">
+    <div class="wrapper ">
         <!-- Navbar -->
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
             <!-- Left navbar links -->
@@ -69,7 +69,7 @@ if ($_SERVER['HTTPS'] != 'on') {
         <!-- /.navbar -->
 
         <!-- Main Sidebar Container -->
-        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <aside class="main-sidebar sidebar-dark-primary elevation-4 position-fixed">
             <!-- Brand Logo -->
             <a href="inicio" class="brand-link">
                 <img src="../public/dist/img/AdminLTELogo.png" alt="AdminLTE Logo"
