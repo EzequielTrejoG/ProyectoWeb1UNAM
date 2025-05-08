@@ -4,6 +4,7 @@
 
     $idDepartamento = isset($_POST['idDepartamento']) ? limpiarCadenas($_POST['idDepartamento']): "";
     $descripcion = isset($_POST['descripcion']) ? limpiarCadenas($_POST['descripcion']): "";
+    date_default_timezone_set("America/Mexico_City");
     $fechaActualizacion = date("Y-m-d H:i:s"); 
     $idEmpActualiza = 1; //Cambiar por el usuario de la sesión 
 
