@@ -35,8 +35,6 @@
     <script src="../public/plugins/jszip/jszip.min.js"></script>
     <script src="../public/plugins/pdfmake/pdfmake.min.js"></script>
     <script src="../public/plugins/pdfmake/vfs_fonts.js"></script>
-    <!--Js para los sweetAlert -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

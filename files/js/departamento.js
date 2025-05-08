@@ -74,21 +74,7 @@ function guardaryEditar(e){
         contentType: false, //No manda cabecero
         processData: false, //No convierte objetos en string
         success: function(mensaje){
-            //alert(mensaje);
-            Swal.fire({
-                toast: true,
-                position: 'top-end',
-                title: '<span style="color: #155724; font-weight: bold;">' + mensaje + '</span>',
-                icon: 'success',
-                showConfirmButton: false,
-                timer: 4000,
-                timerProgressBar: true,
-                background: '#d4edda',
-                didOpen: (toast) => {
-                    toast.querySelector('.swal2-timer-progress-bar').style.background = '#489e5c';
-                }
-                
-            });
+            alert(mensaje);
             mostrarForm(false);
             table.ajax.reload();
         }
