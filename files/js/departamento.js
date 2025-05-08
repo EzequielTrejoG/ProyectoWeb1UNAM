@@ -64,17 +64,31 @@ function cancelarForm(){
 }
 
 function guardaryEditar(e){
-    e.preventDeafult();
+    e.preventDefault();
     $("#btnagregar").prop("disable", true);
     var formData = new FormData($("#formulario")[0]);
     $.ajax({
-        url: "../../ajax/departamento?op=guardaryeditar",
+        url: "../ajax/departamento?op=guardaryeditar",
         type: "POST",
         data: formData,
         contentType: false, //No manda cabecero
         processData: false, //No convierte objetos en string
         success: function(mensaje){
-            alert(mensaje);
+            //alert(mensaje);
+            Swal.fire({
+                toast: true,
+                position: 'top-end',
+                title: '<span style="color: #155724; font-weight: bold;">' + mensaje + '</span>',
+                icon: 'success',
+                showConfirmButton: false,
+                timer: 4000,
+                timerProgressBar: true,
+                background: '#d4edda',
+                didOpen: (toast) => {
+                    toast.querySelector('.swal2-timer-progress-bar').style.background = '#489e5c';
+                }
+                
+            });
             mostrarForm(false);
             table.ajax.reload();
         }
