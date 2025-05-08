@@ -74,7 +74,12 @@ function guardaryEditar(e){
         contentType: false, //No manda cabecero
         processData: false, //No convierte objetos en string
         success: function(mensaje){
-            toastr["success"](mensaje);
+            valida = mensaje.indexOf('rror');
+            if(valida != -1){
+                toastr["error"](mensaje);
+            }else{
+                toastr["success"](mensaje);
+            }
             mostrarForm(false);
             table.ajax.reload();
         }
