@@ -60,6 +60,17 @@
             $rspta = $departamento->mostrar($idDepartamento);
             echo json_encode($rspta);
         break;
+
+        case 'desactivar':
+            $rspta = $departamento->desactivar($idDepartamento);
+            echo $rspta ? "Departamento desactivado" : "Error el Depto no se pudo desactivar";
+        break;
+
+        case 'activar':
+            $rspta = $departamento->activar($idDepartamento);
+            echo $rspta ? "El departamento ha sido activado" : "Error el Depto no se pudo activar";
+        break;
+
     }
 
 ?>

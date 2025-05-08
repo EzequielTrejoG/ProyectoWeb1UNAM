@@ -98,4 +98,56 @@ function mostrar(idDepartamento){
     });
 }
 
+function desactivar(idDepartamento){
+    var ventanaEleccion = toastr.warning('¿Deseas desactivar el Depto seleccionado?<br>' +
+    '<button type="button" id="rsptaSi" class="btn btn-success">Sí</button> ' +
+    '<button type="button" id="rsptaNo" class="btn btn-danger">No</button>', "Alerta");
+
+    $("#rsptaSi").click(function(){
+        console.log("El usuario ha elegido desactivar el Depto");
+        toastr.clear(ventanaEleccion);
+        $.post("../ajax/departamento?op=desactivar", {idDepartamento:idDepartamento}, function(mensaje){
+           //alert(mensaje);
+            valida = mensaje.indexOf('rror');
+            if(valida != -1){
+                toastr["error"](mensaje);
+            }else{
+                toastr["success"](mensaje);
+            }
+           table.ajax.reload(); 
+        });
+    });
+
+    $("#rsptaNo").click(function(){
+        console.log("El usuario ha elegido cancelar la acción");
+        toastr.clear(ventanaEleccion);
+    });
+}
+
+function activar(idDepartamento){
+    var ventanaEleccion = toastr.warning('¿Deseas activar el Depto seleccionado?<br>' +
+    '<button type="button" id="rsptaSi" class="btn btn-success">Sí</button> ' +
+    '<button type="button" id="rsptaNo" class="btn btn-danger">No</button>', "Alerta");
+
+    $("#rsptaSi").click(function(){
+        console.log("El usuario ha elegido activar el Depto");
+        toastr.clear(ventanaEleccion);
+        $.post("../ajax/departamento?op=activar", {idDepartamento:idDepartamento}, function(mensaje){
+           //alert(mensaje);
+            valida = mensaje.indexOf('rror');
+            if(valida != -1){
+                toastr["error"](mensaje);
+            }else{
+                toastr["success"](mensaje);
+            }
+           table.ajax.reload(); 
+        });
+    });
+
+    $("#rsptaNo").click(function(){
+        console.log("El usuario ha elegido cancelar la acción");
+        toastr.clear(ventanaEleccion);
+    });
+}
+
 init();
