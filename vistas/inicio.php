@@ -2,7 +2,7 @@
     require 'cabecero.php';
 ?>
 <!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
+<div class="content-wrapper pt-5 mt-3">
     <!-- Main content -->
     <section class="content">
 
