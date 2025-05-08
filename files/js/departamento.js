@@ -33,8 +33,8 @@ function listar(){
             }
         },
         "destroy": true,
-        "iDisplayLength": 5, //Indica cuántos registros registros se mostrarán en el table.
-        "order": [[1, "desc"]]
+        "iDisplayLength": 10 //Indica cuántos registros registros se mostrarán en el table.
+        //"order": [[1, "desc"]]
     }).DataTable();
 }
 
