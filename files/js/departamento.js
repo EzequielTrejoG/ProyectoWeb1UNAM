@@ -65,7 +65,7 @@ function cancelarForm(){
 
 function guardaryEditar(e){
     e.preventDefault();
-    $("#btnagregar").prop("disable", true);
+    $("#btnagregar").prop("disabled", true);
     var formData = new FormData($("#formulario")[0]);
     $.ajax({
         url: "../ajax/departamento?op=guardaryeditar",
