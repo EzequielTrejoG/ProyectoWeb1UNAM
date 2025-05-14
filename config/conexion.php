@@ -11,7 +11,7 @@
         exit();
     }
 
-    //echo "Hola: " . $conexion->host_info . " adios\n";
+    echo "Hola: " . $conexion->host_info . " adios\n";
 
     function ejecutarConsulta($sql){
         global $conexion;
