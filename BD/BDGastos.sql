@@ -9,3 +9,13 @@ CREATE TABLE IF NOT EXISTS departamentos(
     idEmpleado INT NULL DEFAULT 1,
     PRIMARY KEY (idDepartamento)
 )ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS categorias(
+    idCategoria INT NOT NULL AUTO_INCREMENT,
+    Descripcion VARCHAR(100) NOT NULL,
+    Activo TINYINT NOT NULL DEFAULT 1,
+    fechaCreacion DATETIME NULL DEFAULT CURRENT_TIMESTAMP,
+    fechaActualizacion DATETIME NULL DEFAULT CURRENT_TIMESTAMP,
+    idEmpleado INT NULL DEFAULT 1,
+    PRIMARY KEY (idCategoria)
+)ENGINE = InnoDB;
