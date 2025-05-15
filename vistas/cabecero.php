@@ -94,7 +94,7 @@ if ($_SERVER['HTTPS'] != 'on') {
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="departamento" class="nav-link">
+                                    <a href="departamentos" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Catálogo Departamentos</p>
                                     </a>
