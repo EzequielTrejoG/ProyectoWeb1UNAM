@@ -11,13 +11,11 @@
 
     $departamento = new Departamento();
 
-    switch($_GET['op'])
-    {
+    switch($_GET['op']){
         case 'listar':
             $rspta = $departamento->listar();
             $data = Array();
-            while ($reg = $rspta->fetch_object())
-            {
+            while ($reg = $rspta->fetch_object()){
                 $data[] = array(
                     '0' => $reg->descripcion,
                     '1' => $reg->fechaCreacion,
@@ -44,13 +42,10 @@
         break;
 
         case 'guardaryeditar':
-            if(empty($idDepartamento))
-            {
+            if(empty($idDepartamento)){
                 $rspta = $departamento->insertar($descripcion);
                 echo $rspta != 0 ? "Departamento registrado" : "Error departamento no registrado";
-            }
-            else
-            {
+            }else{
                 $rspta = $departamento->editar($idDepartamento, $descripcion, $fechaActualizacion, $idEmpActualiza);
                 echo $rspta != 0 ? "Departamento actualizado" : "Error departamento no actualizado";
             }

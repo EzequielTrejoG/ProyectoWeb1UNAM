@@ -11,13 +11,11 @@
 
     $categoria = new Categoria();
 
-    switch($_GET['op'])
-    {
+    switch($_GET['op']){
         case 'listar':
             $rspta = $categoria->listar();
             $data = Array();
-            while ($reg = $rspta->fetch_object())
-            {
+            while ($reg = $rspta->fetch_object()){
                 $data[] = array(
                     '0' => $reg->descripcion,
                     '1' => $reg->fechaCreacion,
@@ -44,13 +42,10 @@
         break;
 
         case 'guardaryeditar':
-            if(empty($idCategoria))
-            {
+            if(empty($idCategoria)){
                 $rspta = $categoria->insertar($descripcion);
                 echo $rspta != 0 ? "Categoría registrada" : "Error categoría no registrada";
-            }
-            else
-            {
+            }else{
                 $rspta = $categoria->editar($idCategoria, $descripcion, $fechaActualizacion, $idEmpActualiza);
                 echo $rspta != 0 ? "Categoría actualizada" : "Error categoría no actualizada";
             }

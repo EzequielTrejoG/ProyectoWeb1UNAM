@@ -17,7 +17,6 @@
             $sql = "UPDATE departamentos SET descripcion='$descripcion', fechaActualizacion='$fechaActualizacion', idEmpleado='$idEmpActualiza'
             WHERE idDepartamento='$idDepartamento'";
             return ejecutarConsulta($sql);
-
         }
 
         public function desactivar($idDepartamento){
