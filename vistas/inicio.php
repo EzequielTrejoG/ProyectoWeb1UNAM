@@ -9,12 +9,10 @@
         <!-- Default box -->
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Title</h3>
+                <h3 class="card-title">Aplicación de Control de Gastos</h3>
             </div>
             <div class="card-body">
-                Check the Header part you can find Legacy vesion of style.
-                <br>
-                Start creating your amazing application!
+                Bienvenido!
             </div>
             <!-- /.card-body -->
         </div>
