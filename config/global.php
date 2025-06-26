@@ -7,4 +7,7 @@
     define("DB_PASSWORD", "");
     define("DB_ENCODE", "utf8");
 
+    //Método de Encriptación
+    define("METHOD", "AES-256-CBC");
+
 ?>
