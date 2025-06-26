@@ -10,4 +10,7 @@
     //Método de Encriptación
     define("METHOD", "AES-256-CBC");
 
+    //Llave de Encriptación
+    define("SECRET_KEY", "#SDAWi2025ii@gastos");
+
 ?>
