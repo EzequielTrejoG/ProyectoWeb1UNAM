@@ -9,7 +9,7 @@
         <!-- Default box -->
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">CATEGORIA <button class="btn btn-success" id="btnagregar" onclick="mostrarForm(true)"><i class="fas fa-plus-circle"></i> Agregar</button></h3>
+                <h3 class="card-title">CATEGORIAS <button class="btn btn-success" id="btnagregar" onclick="mostrarForm(true)"><i class="fas fa-plus-circle"></i> Agregar</button></h3>
             </div>
             <div class="card-body">
                 <!-- Contenedor de listados-->
